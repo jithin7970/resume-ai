@@ -1,12 +1,12 @@
 # ResumeMatch AI 🎯
-> AI-powered resume vs job description analyzer — built with Python Flask + Claude API
+> AI-powered resume vs job description analyzer — built with Python Flask + Gemini AI
 
 ## What it does
-Paste your resume and any job description → get an honest match score, skill gaps, strengths, and suggestions powered by Claude AI.
+Paste your resume and any job description → get an honest match score, skill gaps, strengths, and actionable suggestions powered by Google Gemini AI.
 
 ## Tech Stack
 - **Backend:** Python, Flask
-- **AI:** Anthropic Claude API (claude-sonnet)
+- **AI:** Google Gemini API (gemini-2.5-flash) — free tier
 - **Frontend:** HTML5, CSS3, Vanilla JS
 - **Deployment:** Render (free tier)
 
@@ -30,15 +30,16 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-### 4. Set your API key
+### 4. Set your Gemini API key
+Get your free API key at: https://aistudio.google.com → Get API Key (no credit card needed)
+
 ```bash
 # Mac/Linux
-export ANTHROPIC_API_KEY=your_api_key_here
+export GEMINI_API_KEY=your_api_key_here
 
 # Windows
-set ANTHROPIC_API_KEY=your_api_key_here
+set GEMINI_API_KEY=your_api_key_here
 ```
-Get your free API key at: https://console.anthropic.com
 
 ### 5. Run the app
 ```bash
@@ -50,7 +51,7 @@ Visit: http://localhost:5000
 1. Push code to GitHub
 2. Go to render.com → New Web Service
 3. Connect your GitHub repo
-4. Set environment variable: `ANTHROPIC_API_KEY`
+4. Set environment variable: `GEMINI_API_KEY`
 5. Build command: `pip install -r requirements.txt`
 6. Start command: `gunicorn app:app`
 7. Done — your app is live!
@@ -59,7 +60,7 @@ Visit: http://localhost:5000
 ```
 resumematch-ai/
 ├── app.py              # Flask routes
-├── analyzer.py         # Claude API integration
+├── analyzer.py         # Gemini API integration
 ├── requirements.txt    # Dependencies
 ├── templates/
 │   └── index.html      # Frontend UI
@@ -67,4 +68,4 @@ resumematch-ai/
 ```
 
 ## Author
-Jithin Chidepudi — [LinkedIn](https://linkedin.com/in/jithinchidepudi) | [GitHub](https://github.com/jithinchidepudi)
+Jithin Chidepudi — [LinkedIn](https://linkedin.com/in/Chidepudi-jithin) | [GitHub](https://github.com/jithin7970)
